@@ -41,6 +41,7 @@
         justify-content: center;
         padding: 20px;
         position: relative;
+        min-height: 100vh;
       }
 
       #inhalt {
@@ -54,6 +55,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        margin-bottom: 80px;
       }
 
       .header {
@@ -217,8 +219,13 @@
       }
 
       @media (max-height: 600px) {
+        body {
+          padding: 10px;
+        }
+
         #inhalt {
           padding: 16px;
+          margin-bottom: 60px;
         }
         
         .header {
@@ -239,11 +246,12 @@
         }
 
         .footer {
-          bottom: 10px;
+          bottom: 5px;
         }
 
         .footer p {
-          font-size: 0.65em;
+          font-size: 0.6em;
+          margin: 1px 0;
         }
       }
 
@@ -260,6 +268,16 @@
         
         #inhalt {
           padding: 20px;
+        }
+      }
+
+      @media (max-height: 500px) {
+        #inhalt {
+          margin-bottom: 50px;
+        }
+
+        .footer p {
+          font-size: 0.55em;
         }
       }
     </style>
