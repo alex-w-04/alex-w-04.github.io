@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0d1117" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>Alexander Wolzenin</title>
     <style>
       :root {
@@ -157,7 +157,7 @@
         flex-shrink: 0;
       }
 
-      links-container a {
+      .links-container a {
         background: var(--bg-tertiary);
         border: 1px solid var(--border-primary);
         padding: 10px 14px;
@@ -174,7 +174,7 @@
         font-size: 0.85em;
       }
 
-      links-container a::before {
+      .links-container a::before {
         content: '';
         position: absolute;
         top: 0;
@@ -185,7 +185,7 @@
         transition: left 0.5s ease;
       }
 
-      links-container a:hover {
+      .links-container a:hover {
         background: var(--bg-hover);
         border-color: var(--accent-red);
         transform: translateY(-1px);
@@ -193,7 +193,7 @@
         color: var(--accent-red);
       }
 
-      a:hover::before {
+      .links-container a:hover::before {
         left: 100%;
       }
 
@@ -218,6 +218,25 @@
       .footer .name {
         color: var(--text-primary);
         font-weight: 500;
+      }
+
+      /* --- NEU: Impressum-Link unauffällig und passend --- */
+      .footer-impressum {
+        display: inline-block;
+        font-size: 0.7em;
+        color: var(--text-secondary);
+        text-decoration: none;
+        border-bottom: 1px dotted var(--border-primary);
+        padding: 1px 0;
+        margin-top: 4px;
+        transition: color 0.2s;
+        background: none;
+      }
+      .footer-impressum:hover, .footer-impressum:focus {
+        color: var(--accent-red);
+        border-bottom: 1px solid var(--accent-red);
+        text-decoration: none;
+        background: none;
       }
 
       @media (max-height: 600px) {
@@ -255,6 +274,9 @@
           font-size: 0.6em;
           margin: 1px 0;
         }
+        .footer-impressum {
+          font-size: 0.6em;
+        }
       }
 
       @media (max-width: 768px) {
@@ -279,6 +301,9 @@
         }
 
         .footer p {
+          font-size: 0.55em;
+        }
+        .footer-impressum {
           font-size: 0.55em;
         }
       }
@@ -318,7 +343,7 @@
 
     <div class="footer">
       <p class="name">Alexander Wolzenin</p>
-      <a href="impressum.html">Impressum</a>
+      <a class="footer-impressum" href="impressum.html">Impressum</a>
     </div>
   </body>
 </html>
